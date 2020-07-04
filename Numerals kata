@@ -1,32 +1,56 @@
 '''
 # Roman numerals
-3 Jul 20
+4 Jul 20
 '''
 
 class Number:
 	
-	def __init__(self, arabic, roman):
+	def __init__(self, arabic, roman, five_remainder, ten_remainder, fifty_remainder):
 		
-		self.ar = arabic
-		self.ro = roman
+		self.arabic           = arabic
+		self.roman            = roman
+		self.five_remainder   = five_remainder
+		self.ten_remainder  	= ten_remainder
+		self.fifty_remainder  = fifty_remainder
 		
 '''
 # model
 '''
 
-def convert_ar_to_ro(Number):
+def resolve_input(input):
 	
-	return Number
+	try:
+		sensible_input = int(input)
+	except TypeError:
+		sensible_input = 69
+		
+	return sensible_input
+
+
+def get_remainders(number):
+	
+	number.arabic
+	five_remainder = number.arabic % 5
+	ten
+	print('five remainder', remainder)
+	
+	return remainder
 
 '''
 # view
 '''
 
 def greet():
-	print('Welcome to \'numeros ab Roma\'\n')
+	print('Ave. Welcome to \'numeros ab Roma\'\n')
+	
+def tell_arabic(number):
+	print('OK. You typed:\t', number.arabic)
+	
+def tell_sensible_input(number):
+	print('\nSo.  We are converting this arabic numeral:\t', number.arabic)
 
-def tell_roman(Number):
-	print('\nThis is your number in Roman Numerals\t', Number.ro)
+def tell_roman(number):
+	print('\nThis is your number in Roman Numerals\t', number.roman)
 
 '''
 # control
@@ -52,4 +76,26 @@ if __name__ == '__main__':
 	
 	greet()
 	ar_input = ask_arabic()
+	tell_arabic(ar_input)
+	sensible_input = resolve_input(ar_input)
+	tell_sensible_input(sensible_input)
+	number = Number(None, None, None, None)
+	number.ar = sensible_input
+	number = get_remainder(number)
+	
+	
+'''
+# tests
+'''
+
+def test_resolve_input():
+	
+	fake_sensible_ar_input = 42
+	
+	sensible_input = resolve_input(fake_sensible_ar_input)
+	
+	assert isinstance(sensible_input, int), 'Error: this should be an integer.'
+	
+test_resolve_input()
+	
 	
