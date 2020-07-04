@@ -1,0 +1,55 @@
+'''
+# Roman numerals
+k31th 3 Jul 20
+'''
+
+class Number:
+	
+	def __init__(self, arabic, roman):
+		
+		self.ar = arabic
+		self.ro = roman
+		
+'''
+# model
+'''
+
+def convert_ar_to_ro(Number):
+	
+	return Number
+
+'''
+# view
+'''
+
+def greet():
+	print('Welcome to \'numeros ab Roma\'\n')
+
+def tell_roman(Number):
+	print('\nThis is your number in Roman Numerals\t', Number.ro)
+
+'''
+# control
+'''
+
+def ask_arabic():
+	
+	print('\nPlease enter a number in our natural language, the usual integer style, Arabic, post-mediaeval Western European. exanples: {1, 3,  4, 5, 7, 99, 101.\n')
+	
+	print('\nThis program has a range of 1 to 101.\n')
+	
+	print('If you type something silly this input defaults to 69.')
+	
+	ar_input = input('')
+	
+	return ar_input
+	
+'''
+# main
+'''
+
+if __name__ == '__main__':
+	
+	greet()
+	ar_input = ask_arabic()
+	
